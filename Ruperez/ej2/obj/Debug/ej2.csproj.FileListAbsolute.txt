@@ -5,3 +5,10 @@ C:\Users\Alumno\source\repos\Ruperez\ej2\obj\Debug\ej2.csprojAssemblyReference.c
 C:\Users\Alumno\source\repos\Ruperez\ej2\obj\Debug\ej2.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\source\repos\Ruperez\ej2\obj\Debug\ej2.exe
 C:\Users\Alumno\source\repos\Ruperez\ej2\obj\Debug\ej2.pdb
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\bin\Debug\ej2.exe.config
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\bin\Debug\ej2.exe
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\bin\Debug\ej2.pdb
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\obj\Debug\ej2.csproj.AssemblyReference.cache
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\obj\Debug\ej2.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\obj\Debug\ej2.exe
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej2\obj\Debug\ej2.pdb

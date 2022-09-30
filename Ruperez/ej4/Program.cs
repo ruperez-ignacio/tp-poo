@@ -105,7 +105,7 @@ namespace ej4
             }
         }
 
-        public void precioFinal()
+        public virtual void precioFinal()
         {
 
             
@@ -184,7 +184,7 @@ namespace ej4
             }
         }
 
-        public void precioFinal()
+        public override void precioFinal()
         {
             if(carga > 30)
             {
@@ -200,8 +200,54 @@ namespace ej4
     public class television : Electrodomestico
     {
         double resolucion = 20;
-        bool TDT = false;
+        bool tdt = false;
 
+        public television()
+        {
+
+        }
+        public television(double precioBase, double peso)
+        {
+            this.PrecioBase = precioBase;
+            this.Peso = peso;
+        }
+        public television(double resolucion, bool tdt, double precioBase, string color,
+            char consumo, double peso) : base(precioBase, color, consumo, peso)
+        {
+            this.resolucion = resolucion;
+            this.tdt = tdt;
+            this.PrecioBase = precioBase;
+            this.Color = color;
+            this.Consumo = consumo;
+            this.Peso = peso;
+        }
+        public double Resolucion
+        {
+            set
+            {
+                resolucion = value;
+            }
+            get
+            {
+                return resolucion;
+            }
+        }
+        public bool Tdt
+        {
+            set
+            {
+                tdt = value;
+            }
+            get
+            {
+                return tdt;
+            }
+        }
+
+        public void precioFinal()
+        {
+
+        }
 
     }
 
