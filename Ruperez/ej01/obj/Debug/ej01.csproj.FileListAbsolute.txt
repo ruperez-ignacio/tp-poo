@@ -1,0 +1,7 @@
+C:\Users\Alumno\source\repos\Ruperez\ej01\bin\Debug\ej01.exe.config
+C:\Users\Alumno\source\repos\Ruperez\ej01\bin\Debug\ej01.exe
+C:\Users\Alumno\source\repos\Ruperez\ej01\bin\Debug\ej01.pdb
+C:\Users\Alumno\source\repos\Ruperez\ej01\obj\Debug\ej01.csprojAssemblyReference.cache
+C:\Users\Alumno\source\repos\Ruperez\ej01\obj\Debug\ej01.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\source\repos\Ruperez\ej01\obj\Debug\ej01.exe
+C:\Users\Alumno\source\repos\Ruperez\ej01\obj\Debug\ej01.pdb
