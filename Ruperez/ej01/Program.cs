@@ -18,7 +18,52 @@ namespace ej01
         {
             this.titular = titular;
         }
+        public Cuenta(string titular, double cantidad, double cantidadRetiro)
+        {
+            this.titular = titular;
+            this.cantidad = cantidad;
+            this.cantidadRetiro = cantidadRetiro;
+        }
 
+        public string Titular
+        {
+            set
+            {
+                titular = value;
+            }
+            get
+            {
+                return titular;
+            }
+        }
+
+        public double Cantidad
+        {
+
+            set
+            {
+                cantidad = value;
+            }
+            get
+            {
+                return cantidad;
+            }
+        }
+        public double CantidadRetiro
+        {
+            set
+            {
+                cantidadRetiro = value;
+            }
+            get
+            {
+                return cantidadRetiro;
+            }
+        }
+         public void ingresar(double cantidad)
+        {
+
+        }
     }
     
 
