@@ -12,17 +12,34 @@ namespace ej01
     {
         private string titular;
         private double cantidad;
-        private double cantidadRetiro;
+        private double retirarc;
 
-       public Cuenta(string titular)
+        public Cuenta(string titular)
         {
             this.titular = titular;
         }
-        public Cuenta(string titular, double cantidad, double cantidadRetiro)
+        public Cuenta(string titular, double cantidad)
         {
             this.titular = titular;
             this.cantidad = cantidad;
-            this.cantidadRetiro = cantidadRetiro;
+        }
+
+        
+        public void ingresar(double cant)
+        {
+            if (cant >= 0)
+            {
+                cantidad += cant;
+            }
+        }
+
+        public void retirar(float cant)
+        {
+            retirarc = cantidad - cant;
+            if (retirarc < 0)
+            {
+                cantidad = 0;
+            }
         }
 
         public string Titular
@@ -49,30 +66,26 @@ namespace ej01
                 return cantidad;
             }
         }
-        public double CantidadRetiro
-        {
-            set
-            {
-                cantidadRetiro = value;
-            }
-            get
-            {
-                return cantidadRetiro;
-            }
-        }
-         public void ingresar(double cantidad)
-        {
 
-        }
     }
-    
+
 
     class Program
     {
 
         static void Main(string[] args)
         {
+
+            Cuenta c1 = new Cuenta("Nacho", 257);
+
+            c1.ingresar(1000);
+            c1.ingresar(-1000);
+
+            c1.retirar(1000000);
             
+
+            Console.WriteLine(c1.Titular + " tiene " + c1.Cantidad+"$");
+
             Console.ReadKey();
 
 

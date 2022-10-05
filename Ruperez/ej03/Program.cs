@@ -21,7 +21,7 @@ namespace ej03
 
             var random = new Random();
 
-            longitud = 10;
+            longitud = 15;
             var arrayChar = new char[longitud];
             for (int i = 0; i < longitud; i++)
             {
@@ -41,12 +41,26 @@ namespace ej03
 
         }
 
+        public string Contraseña
+        {
+            set
+            {
+                contraseña = value;
+            }
+            get
+            {
+                return contraseña;
+            }
+        }
+
     }
 
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
+
             Console.ReadKey();
         }
     }

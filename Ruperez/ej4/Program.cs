@@ -246,7 +246,17 @@ namespace ej4
 
         public void precioFinal()
         {
+            if (Resolucion > 20)
 
+            {
+                PrecioBase = PrecioBase * 1.30;
+
+                if (Tdt == true)
+                {
+                    PrecioBase = PrecioBase + 50;
+                }
+
+            }
         }
 
     }
@@ -256,17 +266,20 @@ namespace ej4
     {
         static void Main(string[] args)
         {
-        //    Console.WriteLine("introduci nombre");
-        //    string nombre = (Console.ReadLine());
-        //    Console.WriteLine("introduci edad");
-        //    int edad = int.Parse(Console.ReadLine());
-        //    Console.WriteLine("introduci sexo");
-        //    char sexo = char.Parse(Console.ReadLine());
-        //    Console.WriteLine("introduci peso");
-        //    double peso = double.Parse(Console.ReadLine());
-        //    Console.WriteLine("introduci altura");
-        //    double altura = double.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci nombre");
+            //    string nombre = (Console.ReadLine());
+            //    Console.WriteLine("introduci edad");
+            //    int edad = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci sexo");
+            //    char sexo = char.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci peso");
+            //    double peso = double.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci altura");
+            //    double altura = double.Parse(Console.ReadLine());
             //new Lavadora(100, 1.0); 
+
+            Console.ReadKey();
+
         }
     }
 }
