@@ -9,19 +9,20 @@ namespace ej03
     class password
     {
         int longitud;
+        public int Longitud { get { return longitud; } set { this.longitud = value; } }
         string contraseña;
+        public string Contraseña { get { return contraseña; } set { this.contraseña = value; } }
 
         public password()
         {
 
         }
-        public password(int longitud)
+        public password(int longitud) //devuelve contraseña
         {
-            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%$#@";
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
             var random = new Random();
 
-            longitud = 15;
             var arrayChar = new char[longitud];
             for (int i = 0; i < longitud; i++)
             {
@@ -30,39 +31,98 @@ namespace ej03
 
             }
             var resultString = new String(arrayChar);
-            this.contraseña = resultString;
-            Console.WriteLine(contraseña);
+            this.Contraseña = resultString;
+            Console.WriteLine(Contraseña);
         }
 
-        public bool esFuerte()
+        public void Contra() //devuelve contraseña
         {
-            bool s = false;
-            return s;
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            var random = new Random();
+
+            var arrayChar = new char[longitud];
+            for (int i = 0; i < longitud; i++)
+            {
+                arrayChar[i] = characters[random.Next(characters.Length)];
+
+
+            }
+            var resultString = new String(arrayChar);
+            this.Contraseña = resultString;
+            Console.WriteLine("La contra es: " + this.Contraseña);
 
         }
-
-        public string Contraseña
+        public void esFuerte()
         {
-            set
+            int mayus = 0;
+            int minus = 0;
+            int num = 0;
+            for (int i = 0; i < this.Contraseña.Length; i++)
             {
-                contraseña = value;
+                if (contraseña[i] >= 97 && contraseña[i] <= 122)
+                {
+                    minus += 1;
+                }
+                else
+                {
+                    if (contraseña[i] >= 65 && contraseña[i] <= 90)
+                    {
+                        mayus += 1;
+                    }
+                    else
+                    {
+                        num += 1;
+                    }
+                }
             }
-            get
+            if (num >= 5 && minus >= 1 && mayus >= 2)
             {
-                return contraseña;
+
+                Console.WriteLine("es fuerte");
+            }
+            else
+            {
+
+                Console.WriteLine("es debil");
             }
         }
+
+
+        //public bool esFuerte(char c)
+        //{
+        //    int mayus = 0;
+        //    int minus = 0;
+
+        //    for (int i = 0; i < this.Contraseña.Length; i++)
+        //    {
+
+        //    }
+        //}
 
     }
+
+
 
     class Program
     {
         static void Main(string[] args)
         {
+
+            password password = new password();
+            Console.Write("Introduce longitud: ");
+            password.Longitud = (int.Parse(Console.ReadLine()));
+
+            password.Contra();
+            password.esFuerte();
+
+            //password objeto2 = new password();
+
+            //Console.WriteLine(Contraseña + "FBR");
+
             Console.WriteLine();
 
             Console.ReadKey();
         }
     }
-
 }

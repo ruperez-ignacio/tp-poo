@@ -13,3 +13,4 @@ C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.SuggestedBin
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.CoreCompileInputs.cache
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.exe
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.pdb
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.SuggestedBindingRedirects.cache

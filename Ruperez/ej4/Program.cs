@@ -266,6 +266,9 @@ namespace ej4
     {
         static void Main(string[] args)
         {
+            Lavadora lav1 = new Lavadora();
+
+            Electrodomestico[] eletrodomesticos = { lav1 };
             //    Console.WriteLine("introduci nombre");
             //    string nombre = (Console.ReadLine());
             //    Console.WriteLine("introduci edad");
