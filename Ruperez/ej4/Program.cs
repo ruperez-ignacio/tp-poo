@@ -101,14 +101,15 @@ namespace ej4
         public void comprobarColor(String color)
         {
             string[] colors = { "blanco", "negro", "rojo", "azul", "gris" };
-            if (color == colors)
+            bool encontrado = false; //si es false muestra el valor por defecto
+            for (int i = 0; i < colors.Length; i++)
             {
-                color = "blanco";
+                if (colors[i].Equals(colors))
+                {
+                    encontrado = true;//si es verdadero mostrara el valor de color
+                }
             }
-            else
-            {
-                color = "blanco";
-            }
+            
         }
 
         public virtual void precioFinal()
@@ -116,7 +117,7 @@ namespace ej4
 
             
                 double plus = 0;
-                switch (consumo)
+                switch (precioBase)
                 {
                     case 'A':
                         plus += 100;
@@ -196,10 +197,6 @@ namespace ej4
             {
                 PrecioBase += 50;
             }
-            else
-            {
-                PrecioBase = PrecioBase;
-            }
         }
     }
 
@@ -252,9 +249,9 @@ namespace ej4
 
         public void precioFinal()
         {
-            if (Resolucion > 20)
+            if (Resolucion > 40)
 
-            {
+            {   
                 PrecioBase = PrecioBase * 1.30;
 
                 if (Tdt == true)
@@ -272,22 +269,54 @@ namespace ej4
     {
         static void Main(string[] args)
         {
-            Lavadora lav1 = new Lavadora();
+            Lavadora lavadora0 = new Lavadora(100, 30);
+            Lavadora lavadora1 = new Lavadora(500, 40);
+            Lavadora lavadora2 = new Lavadora(600, 50);
+            Lavadora lavadora3 = new Lavadora(700, 60);
+            Lavadora lavadora4 = new Lavadora(250, 70);
 
-            Electrodomestico[] eletrodomesticos = { lav1 };
-            //    Console.WriteLine("introduci nombre");
-            //    string nombre = (Console.ReadLine());
-            //    Console.WriteLine("introduci edad");
-            //    int edad = int.Parse(Console.ReadLine());
-            //    Console.WriteLine("introduci sexo");
-            //    char sexo = char.Parse(Console.ReadLine());
-            //    Console.WriteLine("introduci peso");
-            //    double peso = double.Parse(Console.ReadLine());
-            //    Console.WriteLine("introduci altura");
-            //    double altura = double.Parse(Console.ReadLine());
-            //new Lavadora(100, 1.0); 
+            television television0 = new television(20, 10);
+            television television1 = new television(35,49);
+            television television2 = new television(65, 87);
+            television television3 = new television(133, 20);
+            television television4 = new television(100, 80);
 
-            Console.ReadKey();
+
+
+
+            Electrodomestico[] electrodomesticos = {lavadora0, lavadora1, lavadora2, lavadora3 ,lavadora4, television0, television1 , television2, television3, television4};
+
+            double sumaTelevisiones = 0;
+            double sumaLavadoras = 0;
+
+            //Recorremos el array invocando el metodo precioFinal
+            for (int i = 0; i < electrodomesticos.Length; i++)
+            {
+                
+
+                if (electrodomesticos[i] instanceof electrodomesticos){
+                sumaElectrodomesticos += electrodomesticos[i].precioFinal();
+            }
+            if (electrodomesticos[i] instanceof Lavadora){
+                sumaLavadoras += electrodomesticos[i].precioFinal();
+            }
+            if (electrodomesticos[i] instanceof television){
+                sumaTelevisiones += electrodomesticos[i].precioFinal();
+            }
+        }
+        //    Console.WriteLine("introduci nombre");
+        //    string nombre = (Console.ReadLine());
+        //    Console.WriteLine("introduci edad");
+        //    int edad = int.Parse(Console.ReadLine());
+        //    Console.WriteLine("introduci sexo");
+        //    char sexo = char.Parse(Console.ReadLine());
+        //    Console.WriteLine("introduci peso");
+        //    double peso = double.Parse(Console.ReadLine());
+        //    Console.WriteLine("introduci altura");
+        //    double altura = double.Parse(Console.ReadLine());
+        //new Lavadora(100, 1.0); 
+
+        Console.ReadKey();
 
         }
     }
