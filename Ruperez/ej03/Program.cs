@@ -8,7 +8,7 @@ namespace ej03
 {
     class password
     {
-        int longitud;
+        int longitud = 8;
         public int Longitud { get { return longitud; } set { this.longitud = value; } }
         string contraseña;
         public string Contraseña { get { return contraseña; } set { this.contraseña = value; } }
@@ -17,9 +17,9 @@ namespace ej03
         {
 
         }
-        public password(int longitud) //devuelve contraseña
+        public password(int longitud) 
         {
-            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%$#@";
 
             var random = new Random();
 
@@ -32,12 +32,11 @@ namespace ej03
             }
             var resultString = new String(arrayChar);
             this.Contraseña = resultString;
-            Console.WriteLine(Contraseña);
         }
 
-        public void Contra() //devuelve contraseña
+        public void generarPassword()
         {
-            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%$#@";
 
             var random = new Random();
 
@@ -110,17 +109,12 @@ namespace ej03
         {
 
             password password = new password();
-            Console.Write("Introduce longitud: ");
-            password.Longitud = (int.Parse(Console.ReadLine()));
+            Console.Write("La contraseña es: " );
 
-            password.Contra();
+            password.generarPassword();
             password.esFuerte();
 
-            //password objeto2 = new password();
 
-            //Console.WriteLine(Contraseña + "FBR");
-
-            Console.WriteLine();
 
             Console.ReadKey();
         }

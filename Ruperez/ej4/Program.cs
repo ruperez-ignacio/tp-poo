@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ej4
@@ -81,11 +82,15 @@ namespace ej4
 
         public void comprobarConsumoEnergetico(char letra)
         {
-            if(letra == 'F' || letra == 'f')
+            //string s = "asd1";
+            //// Define the regular expression pattern.            
+            //bool res = Regex.IsMatch(s, @"^[a-fA-F]+$");
+            //Console.WriteLine(res);
+
+            if (letra > 65 && letra < 70 || letra > 97 && letra < 102)
             {
-                consumo = 'F';
-            }else if (letra == 'A' || letra == 'a'){
-                consumo = 'A';
+                consumo = letra;
+
             }
             else
             {
@@ -95,7 +100,8 @@ namespace ej4
 
         public void comprobarColor(String color)
         {
-            if (color == "blanco")
+            string[] colors = { "blanco", "negro", "rojo", "azul", "gris" };
+            if (color == colors)
             {
                 color = "blanco";
             }

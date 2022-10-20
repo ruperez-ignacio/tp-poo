@@ -1,7 +1,6 @@
 C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\bin\Debug\ej03.exe.config
 C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\bin\Debug\ej03.exe
 C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\bin\Debug\ej03.pdb
-C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.AssemblyReference.cache
 C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.CoreCompileInputs.cache
 C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.exe
 C:\Users\alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.pdb
@@ -13,4 +12,4 @@ C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.SuggestedBin
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.CoreCompileInputs.cache
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.exe
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej03\obj\Debug\ej03.pdb
-C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej03\obj\Debug\ej03.csprojAssemblyReference.cache
