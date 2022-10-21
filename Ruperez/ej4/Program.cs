@@ -112,12 +112,12 @@ namespace ej4
             
         }
 
-        public virtual void precioFinal()
+        public virtual double precioFinal()
         {
 
             
                 double plus = 0;
-                switch (precioBase)
+                switch (consumo)
                 {
                     case 'A':
                         plus += 100;
@@ -154,6 +154,7 @@ namespace ej4
                 {
                     plus += 100;
                 }
+            return precioBase + plus;
         }
     }
 
@@ -191,12 +192,14 @@ namespace ej4
             }
         }
 
-        public override void precioFinal()
+        public override double precioFinal()
         {
+            double plus = base.precioFinal();
             if(carga > 30)
             {
                 PrecioBase += 50;
             }
+            return plus;
         }
     }
 
@@ -247,10 +250,10 @@ namespace ej4
             }
         }
 
-        public void precioFinal()
+        public override double precioFinal()
         {
+            double plus = base.precioFinal();
             if (Resolucion > 40)
-
             {   
                 PrecioBase = PrecioBase * 1.30;
 
@@ -260,6 +263,7 @@ namespace ej4
                 }
 
             }
+            return plus;
         }
 
     }
@@ -288,36 +292,45 @@ namespace ej4
 
             double sumaTelevisiones = 0;
             double sumaLavadoras = 0;
+            double sumaElectrodomesticos = 0;
 
             //Recorremos el array invocando el metodo precioFinal
+
             for (int i = 0; i < electrodomesticos.Length; i++)
             {
                 
 
-                if (electrodomesticos[i] instanceof electrodomesticos){
+                if (electrodomesticos[i] is Electrodomestico){
                 sumaElectrodomesticos += electrodomesticos[i].precioFinal();
             }
-            if (electrodomesticos[i] instanceof Lavadora){
+            if (electrodomesticos[i] is Lavadora){
                 sumaLavadoras += electrodomesticos[i].precioFinal();
             }
-            if (electrodomesticos[i] instanceof television){
+            if (electrodomesticos[i] is television){
                 sumaTelevisiones += electrodomesticos[i].precioFinal();
             }
         }
-        //    Console.WriteLine("introduci nombre");
-        //    string nombre = (Console.ReadLine());
-        //    Console.WriteLine("introduci edad");
-        //    int edad = int.Parse(Console.ReadLine());
-        //    Console.WriteLine("introduci sexo");
-        //    char sexo = char.Parse(Console.ReadLine());
-        //    Console.WriteLine("introduci peso");
-        //    double peso = double.Parse(Console.ReadLine());
-        //    Console.WriteLine("introduci altura");
-        //    double altura = double.Parse(Console.ReadLine());
-        //new Lavadora(100, 1.0); 
 
-        Console.ReadKey();
+            Console.WriteLine("Todos los electrodomesticos cuestan: {0}", sumaElectrodomesticos);
+            Console.WriteLine("Todas las lavadoras cuestan: {0}", sumaLavadoras);
+            Console.WriteLine("Todas las televisiones cuestan: {0}", sumaTelevisiones);
+
+
+            //    Console.WriteLine("introduci nombre");
+            //    string nombre = (Console.ReadLine());
+            //    Console.WriteLine("introduci edad");
+            //    int edad = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci sexo");
+            //    char sexo = char.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci peso");
+            //    double peso = double.Parse(Console.ReadLine());
+            //    Console.WriteLine("introduci altura");
+            //    double altura = double.Parse(Console.ReadLine());
+            //new Lavadora(100, 1.0); 
+
+            Console.ReadKey();
 
         }
     }
 }
+
