@@ -12,4 +12,4 @@ C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej4\obj\Debug\ej4.csproj.SuggestedBindi
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej4\obj\Debug\ej4.csproj.CoreCompileInputs.cache
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej4\obj\Debug\ej4.exe
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej4\obj\Debug\ej4.pdb
-C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej4\obj\Debug\ej4.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\tp-poo\Ruperez\ej4\obj\Debug\ej4.csproj.AssemblyReference.cache

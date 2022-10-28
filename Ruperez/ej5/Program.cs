@@ -147,35 +147,53 @@ namespace ej5
         {
             return entregado;
         }
-        //Array serie2 = new Array[];
     }
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            serie serie1 = new serie("pol", 2, "ficcion", "Sterk");
-            serie serie2 = new serie("ley", 10, "ficcion", "Sterk");
-            serie serie3 = new serie("order", 7, "policial", "Tony");
-            serie serie4 = new serie("ley", 11, "ficcion", "Terk");
-            serie serie5 = new serie("mentalist", 8, "policial", "Sterk");
+            serie serie0 = new serie("pol", 2, "ficcion", "Sterk");
+            serie serie1 = new serie("ley", 10, "ficcion", "Sterk");
+            serie serie2 = new serie("order", 7, "policial", "Tony");
+            serie serie3 = new serie("ley", 11, "ficcion", "Terk");
+            serie serie4 = new serie("mentalist", 8, "policial", "Sterk");
 
-            videojuegos juego1 = new videojuegos("fortnite", 200, "shooter", "Epic Games");
-            videojuegos juego2 = new videojuegos("LOL", 64, "MOBA", "Legends");
-            videojuegos juego3 = new videojuegos("csgo", 200, "shooter", "Epic Games");
-            videojuegos juego4 = new videojuegos("valorant", 64, "MOBA", "Legends");
-            videojuegos juego5 = new videojuegos("fortnite", 200, "shooter", "Epic Games");
+            videojuegos juego0 = new videojuegos("fortnite", 200, "shooter", "Epic Games");
+            videojuegos juego1 = new videojuegos("LOL", 64, "MOBA", "Legends");
+            videojuegos juego2 = new videojuegos("csgo", 200, "shooter", "Epic Games");
+            videojuegos juego3 = new videojuegos("valorant", 64, "MOBA", "Legends");
+            videojuegos juego4 = new videojuegos("fortnite", 200, "shooter", "Epic Games");
 
-            serie2.entregar();
-            serie1.entregar();
-            juego.entregar();
+            serie[] series = {serie0, serie1, serie2, serie3, serie4};
+
+            videojuegos[] videojuegos = {juego0, juego1, juego2, juego3, juego4};
+
+            juego0.entregar();
             juego1.entregar();
-            //serie series[0];
+            juego3.entregar();
 
-            //serie serieo1[1];
+            serie0.entregar();
+            serie1.entregar();
+            serie2.entregar();
+            serie4.entregar();
 
-            Console.WriteLine(serie2.Titulo + " " + serie2.Temporada + " " + serie2.Genero + " " + serie2.Creador);
-            Console.WriteLine(serie1.Titulo + " " + serie1.Temporada + " " + serie1.Genero + " " + serie1.Creador);
+            int entregados = 0;
+
+            for (int i = 0; i < series.Length; i++)
+            {
+                if (series[i].isEntregado())
+                {
+                    entregados += 1;
+
+                }
+                if (videojuegos[i].isEntregado())
+                {
+                    entregados += 1;
+                }
+            }
+
+            Console.WriteLine("hay entregados: " + entregados);
 
 
             Console.ReadKey();

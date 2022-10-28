@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32901.215
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ej01", "ej01\ej01.csproj", "{BC4A6672-2DBC-4B8E-80ED-2DDF973C148D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ej03", "ej03\ej03.csproj", "{06893C83-56B6-484F-88FC-2296D95247A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ej5", "ej5\ej5.csproj", "{3FF73726-9889-4CE4-930B-0670EECD7E17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ej6", "ej6\ej6.csproj", "{95CB0F74-00AE-4DDF-B4FA-8FBFFF136C1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3FF73726-9889-4CE4-930B-0670EECD7E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FF73726-9889-4CE4-930B-0670EECD7E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FF73726-9889-4CE4-930B-0670EECD7E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CB0F74-00AE-4DDF-B4FA-8FBFFF136C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CB0F74-00AE-4DDF-B4FA-8FBFFF136C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CB0F74-00AE-4DDF-B4FA-8FBFFF136C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CB0F74-00AE-4DDF-B4FA-8FBFFF136C1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
