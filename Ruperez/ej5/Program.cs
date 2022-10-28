@@ -154,11 +154,17 @@ namespace ej5
     {
         static void Main(string[] args)
         {
-            serie serie2 = new serie("pol", 2, "ficcion", "Sterk");
-            serie serie1 = new serie("ley", 10, "ficcion", "Sterk");
+            serie serie1 = new serie("pol", 2, "ficcion", "Sterk");
+            serie serie2 = new serie("ley", 10, "ficcion", "Sterk");
+            serie serie3 = new serie("order", 7, "policial", "Tony");
+            serie serie4 = new serie("ley", 11, "ficcion", "Terk");
+            serie serie5 = new serie("mentalist", 8, "policial", "Sterk");
 
-            videojuegos juego = new videojuegos("fortnite", 200, "shooter", "Epic Games");
-            videojuegos juego1 = new videojuegos("LOL", 64, "MOBA", "Legends");
+            videojuegos juego1 = new videojuegos("fortnite", 200, "shooter", "Epic Games");
+            videojuegos juego2 = new videojuegos("LOL", 64, "MOBA", "Legends");
+            videojuegos juego3 = new videojuegos("csgo", 200, "shooter", "Epic Games");
+            videojuegos juego4 = new videojuegos("valorant", 64, "MOBA", "Legends");
+            videojuegos juego5 = new videojuegos("fortnite", 200, "shooter", "Epic Games");
 
             serie2.entregar();
             serie1.entregar();
