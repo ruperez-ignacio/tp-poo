@@ -76,7 +76,6 @@ namespace ej7
             Raices valores = new Raices(20, 43, 13.8);
 
             valores.calcular();
-            Console.ReadKey();
         }
     }
 }
