@@ -11,6 +11,28 @@ namespace ej8
         string nombre;
         int edad;
         char sexo;
+        bool asistencia;
+        
+
+        public string Nombre { get; set; }
+        public int Edad { get; set; }
+        public char Sexo { get; set; }
+        public bool Asistencia
+        {
+            get { return asistencia; }
+            set { asistencia = value; }
+        }
+
+        public void asistencias()
+        {
+            
+
+
+            if (this is Estudiante)
+            {
+
+            }
+        } 
     }
 
     class Aula
@@ -21,6 +43,15 @@ namespace ej8
     class Estudiante : Persona
     {
         int calificacion;
+
+        public void asistencias()
+        {
+            
+            //if()
+            //{
+
+            //}
+        }
     }
 
     class Docente : Persona
