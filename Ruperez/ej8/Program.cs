@@ -11,13 +11,13 @@ namespace ej8
         string nombre;
         int edad;
         char sexo;
-        bool asistencia;
+        int asistencia;
         
 
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public char Sexo { get; set; }
-        public bool Asistencia
+        public int Asistencia
         {
             get { return asistencia; }
             set { asistencia = value; }
@@ -25,12 +25,14 @@ namespace ej8
 
         public void asistencias()
         {
-            
 
 
             if (this is Estudiante)
             {
+                if(Asistencia == 0)
+                {
 
+                }
             }
         } 
     }
