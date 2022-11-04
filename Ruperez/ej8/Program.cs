@@ -11,30 +11,35 @@ namespace ej8
         string nombre;
         int edad;
         char sexo;
-        int asistencia;
+        bool asistencia;
         
 
         public string Nombre { get; set; }
         public int Edad { get; set; }
         public char Sexo { get; set; }
-        public int Asistencia
+        public bool Asistencia
         {
             get { return asistencia; }
             set { asistencia = value; }
         }
 
-        public void asistencias()
+        public void disponibilidad()
         {
+            Random rnd = new Random();
+            int prob = rnd.Next(0, 100 + 1);
 
 
-            if (this is Estudiante)
+            if (prob < 50)
             {
-                if(Asistencia == 0)
-                {
-
-                }
+                Asistencia = false;
             }
-        } 
+            else
+            {
+                Asistencia = true;
+            }
+
+        }
+
     }
 
     class Aula
@@ -46,20 +51,29 @@ namespace ej8
     {
         int calificacion;
 
-        public void asistencias()
-        {
-            
-            //if()
-            //{
-
-            //}
-        }
+        
     }
 
     class Docente : Persona
     {
         string[] materia = { "matemáticas", "filosofía", "física" };
-        
+
+        public void dispDocente()
+        {
+            Random rnd = new Random();
+            int prob = rnd.Next(0, 100 + 1);
+
+            if (prob < 20)
+            {
+                Asistencia = false;
+            }
+            else
+            {
+                Asistencia = true;
+            }
+
+        }
+
     }
     
 
