@@ -12,6 +12,7 @@ namespace ej8
         int edad;
         char sexo;
         bool asistencia;
+        int faltas;
         
 
         public string Nombre { get; set; }
@@ -22,41 +23,64 @@ namespace ej8
             get { return asistencia; }
             set { asistencia = value; }
         }
+        public int Faltas
+        {
+            get { return faltas; }
+            set { faltas = value; }
+        }
 
-        public void disponibilidad()
+        public virtual void disponibilidad()
         {
             Random rnd = new Random();
             int prob = rnd.Next(0, 100 + 1);
 
-
-            if (prob < 50)
+            if(this is Estudiante)
             {
-                Asistencia = false;
+                if (prob < 50)
+                {
+                    Asistencia = false;
+                    faltas++;
+                }
+                else
+                {
+                    Asistencia = true;
+                }
             }
-            else
+            if (this is Docente)
             {
-                Asistencia = true;
+                if (prob < 20)
+                {
+                    Asistencia = false;
+                    faltas++;
+                }
+                else
+                {
+                    Asistencia = true;
+                }
             }
-
         }
 
     }
 
-    class Aula
+    class Aula 
     {
+        int id_aula; 
+        int maxEstudiantes = 30;
+        string[] materia = { "matemáticas", "filosofía", "física" };
 
+        public override void disponibilidad()
+        {
+        }
     }
 
     class Estudiante : Persona
     {
         int calificacion;
-
         
     }
 
     class Docente : Persona
     {
-        string[] materia = { "matemáticas", "filosofía", "física" };
 
         public void dispDocente()
         {
