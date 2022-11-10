@@ -13,11 +13,37 @@ namespace ej8
         char sexo;
         bool asistencia;
         int faltas;
-        
+        int prob;
+        int sitio;
 
-        public string Nombre { get; set; }
-        public int Edad { get; set; }
-        public char Sexo { get; set; }
+        public Persona()
+        {
+
+        }
+        public Persona(string nombre)
+        {
+            this.nombre = nombre;
+        }
+        public int Sitio
+        {
+            get { return sitio; }
+            set { sitio = value; }
+        }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public int Edad
+        {
+            get { return edad; }
+            set { edad = value; }
+        }
+        public char Sexo
+        {
+            get { return sexo; }
+            set { sexo = value; }
+        }
         public bool Asistencia
         {
             get { return asistencia; }
@@ -28,74 +54,96 @@ namespace ej8
             get { return faltas; }
             set { faltas = value; }
         }
-
+        public int Prob
+        {
+            get { return prob; }
+            set { prob = value; }
+        }
         public virtual void disponibilidad()
         {
             Random rnd = new Random();
-            int prob = rnd.Next(0, 100 + 1);
-
-            if(this is Estudiante)
-            {
-                if (prob < 50)
-                {
-                    Asistencia = false;
-                    faltas++;
-                }
-                else
-                {
-                    Asistencia = true;
-                }
-            }
-            if (this is Docente)
-            {
-                if (prob < 20)
-                {
-                    Asistencia = false;
-                    faltas++;
-                }
-                else
-                {
-                    Asistencia = true;
-                }
-            }
+            int Prob = rnd.Next(0, 100 + 1);
         }
 
     }
 
-    class Aula 
+    class Aula : Persona 
     {
-        int id_aula; 
+        int id_aula;
+        Docente docente;
+        Estudiante[] Estudiantes;
         int maxEstudiantes = 30;
         string[] materia = { "matemáticas", "filosofía", "física" };
+        Docente docentes = new Docente();
+        Estudiante estudiante = new Estudiante();
 
-        public override void disponibilidad()
+        public Aula(string nombre, bool asistencia, string materia) : base (nombre)
         {
+            this.Nombre = nombre;
+            this.Asistencia = asistencia;
         }
     }
 
     class Estudiante : Persona
     {
         int calificacion;
-        
+
+        public Estudiante()
+        {
+
+        }
+        public Estudiante(string nombre) : base(nombre)
+        {
+            this.Nombre = nombre;
+        }
+
+        public override void disponibilidad()
+        {
+            int f = 0;
+            int e = 0;
+            if (this is Estudiante)
+            {
+                if (Prob < 50)
+                {
+                    Asistencia = false;
+                    e++;
+                }
+                else
+                {
+                    Asistencia = true;
+                    f++;
+                }
+            }
+        }
+
     }
 
     class Docente : Persona
     {
+        string materia;
 
-        public void dispDocente()
+        public Docente()
         {
-            Random rnd = new Random();
-            int prob = rnd.Next(0, 100 + 1);
 
-            if (prob < 20)
-            {
-                Asistencia = false;
-            }
-            else
-            {
-                Asistencia = true;
-            }
+        }
+        public Docente(string nombre) : base(nombre)
+        {
+            this.Nombre = nombre;
+        }
 
+        public override void disponibilidad()
+        {
+            if (this is Docente)
+            {
+                if (Prob < 20)
+                {
+                    Asistencia = false;
+                }
+                else
+                {
+                    Asistencia = true;
+                }
+            }
         }
 
     }
@@ -106,6 +154,17 @@ namespace ej8
     {
         static void Main(string[] args)
         {
+            Estudiante est1 = new Estudiante("pepe");
+            Estudiante est2 = new Estudiante("Lucas");
+
+            if (Docente == true)
+            est1.disponibilidad();
+            est2.disponibilidad();
+            
+
+
+            Console.ReadKey();
+
         }
     }
 }
