@@ -62,7 +62,6 @@ namespace ej8
         public virtual void disponibilidad()
         {
             Random rnd = new Random();
-            int Prob = rnd.Next(0, 100 + 1);
         }
 
     }
@@ -72,16 +71,18 @@ namespace ej8
         int id_aula;
         Docente docente;
         Estudiante[] Estudiantes;
+
+        Estudiante estudiante1;
         int maxEstudiantes = 30;
         string[] materia = { "matemáticas", "filosofía", "física" };
         Docente docentes = new Docente();
-        Estudiante estudiante = new Estudiante();
+        Estudiante estudiante2 = new Estudiante();
 
-        public Aula(string nombre, bool asistencia, string materia) : base (nombre)
-        {
-            this.Nombre = nombre;
-            this.Asistencia = asistencia;
-        }
+        List<Estudiante> estudiante = new List<Estudiante>();
+
+
+
+      
     }
 
     class Estudiante : Persona
@@ -99,20 +100,14 @@ namespace ej8
 
         public override void disponibilidad()
         {
-            int f = 0;
-            int e = 0;
-            if (this is Estudiante)
+            Random rnd = new Random();
+            if (rnd.Next(0, 100) < 50)
             {
-                if (Prob < 50)
-                {
-                    Asistencia = false;
-                    e++;
-                }
-                else
-                {
-                    Asistencia = true;
-                    f++;
-                }
+                Asistencia = false;
+            }
+            else
+            {
+                Asistencia = true;
             }
         }
 
@@ -133,16 +128,14 @@ namespace ej8
 
         public override void disponibilidad()
         {
-            if (this is Docente)
+            Random rnd = new Random();
+            if (rnd.Next(0, 100) < 20)
             {
-                if (Prob < 20)
-                {
-                    Asistencia = false;
-                }
-                else
-                {
-                    Asistencia = true;
-                }
+                Asistencia = false;
+            }
+            else
+            {
+                Asistencia = true;
             }
         }
 
@@ -154,15 +147,27 @@ namespace ej8
     {
         static void Main(string[] args)
         {
-            Estudiante est1 = new Estudiante("pepe");
-            Estudiante est2 = new Estudiante("Lucas");
+            Estudiante est;
+            List<Estudiante> list = new List<Estudiante>();
 
-            if (Docente == true)
-            est1.disponibilidad();
-            est2.disponibilidad();
+
+            est = new Estudiante();
+            list.Add(est);
+            est = new Estudiante();
+            list.Add(est);
+            est = new Estudiante();
+            list.Add(est);
+            est = new Estudiante();
+            list.Add(est);
+
             
 
-
+            /* if (Docente == true)
+             est1.disponibilidad();
+             est2.disponibilidad();
+             */
+            est1.disponibilidad();
+            Console.WriteLine(est1.Asistencia);
             Console.ReadKey();
 
         }
