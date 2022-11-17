@@ -66,7 +66,7 @@ namespace ej8
 
     }
 
-    class Aula : Persona 
+    class Aula : Persona
     {
         int id_aula;
         Docente docente;
@@ -75,14 +75,45 @@ namespace ej8
         Estudiante estudiante1;
         int maxEstudiantes = 30;
         string[] materia = { "matemáticas", "filosofía", "física" };
-        Docente docentes = new Docente();
         Estudiante estudiante2 = new Estudiante();
 
-        List<Estudiante> estudiante = new List<Estudiante>();
+
+
+        //List<Estudiante> estudiante = new List<Estudiante>();
 
 
 
-      
+        public Aula()
+        {
+            Docente docentes = new Docente("Profe Carlos");
+
+            Estudiante[] e = new Estudiante[maxEstudiantes];
+       
+        }
+
+        private bool AsistenciaEst()
+        {
+            int t = 0;
+
+            foreach (var estudiante in estudiantes)
+            {
+                if (estudiante.Asistio == true)
+                {
+                    t++;
+                }
+            }
+
+            if (t > Estudiantes.Length / 2)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
     }
 
     class Estudiante : Persona
@@ -109,6 +140,12 @@ namespace ej8
             {
                 Asistencia = true;
             }
+        }
+
+        public void asistencia()
+        {
+            Random rnd = new Random();
+            int calificacion = rnd.Next(0, 10);
         }
 
     }
@@ -147,27 +184,34 @@ namespace ej8
     {
         static void Main(string[] args)
         {
-            Estudiante est;
-            List<Estudiante> list = new List<Estudiante>();
+            if ()
+            {
+
+            }
+            
+            Aula aula = new Aula();
+
+            //Estudiante est;
+            //List<Estudiante> list = new List<Estudiante>();
 
 
-            est = new Estudiante();
-            list.Add(est);
-            est = new Estudiante();
-            list.Add(est);
-            est = new Estudiante();
-            list.Add(est);
-            est = new Estudiante();
-            list.Add(est);
-
+            //est = new Estudiante();
+            //list.Add(est);
+            //est = new Estudiante();
+            //list.Add(est);
+            //est = new Estudiante();
+            //list.Add(est);
+            //est = new Estudiante();
+            //list.Add(est);
+            //list.Add(docentes);
+            //Aula aula = new Aula();
             
 
             /* if (Docente == true)
              est1.disponibilidad();
              est2.disponibilidad();
              */
-            est1.disponibilidad();
-            Console.WriteLine(est1.Asistencia);
+            Console.WriteLine();
             Console.ReadKey();
 
         }
