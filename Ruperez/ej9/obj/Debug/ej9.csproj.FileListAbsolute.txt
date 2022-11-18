@@ -1,0 +1,2 @@
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\obj\Debug\ej9.csprojAssemblyReference.cache
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.CoreCompileInputs.cache

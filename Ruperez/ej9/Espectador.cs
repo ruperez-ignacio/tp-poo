@@ -21,36 +21,41 @@ namespace ej9
         }
 
         /*Metodos*/
-        public String getNombre()
+        public String Nombre
         {
-            return nombre;
+            set
+            {
+                nombre = value;
+            }
+            get
+            {
+                return nombre;
+            }
         }
 
-        public void setNombre(String nombre)
+        public int Edad
         {
-            this.nombre = nombre;
+            set
+            {
+                edad = value;
+            }
+            get
+            {
+                return edad;
+            }
         }
 
-        public int getEdad()
+        public double Dinero
         {
-            return edad;
+            set
+            {
+                dinero = value;
+            }
+            get
+            {
+                return dinero;
+            }
         }
-
-        public void setEdad(int edad)
-        {
-            this.edad = edad;
-        }
-
-        public double getDinero()
-        {
-            return dinero;
-        }
-
-        public void setDinero(double dinero)
-        {
-            this.dinero = dinero;
-        }
-
         /**
          * Pagamos la entrada del cine
          *
@@ -69,7 +74,7 @@ namespace ej9
          * @param edadMinima
          * @return
          */
-        public boolean tieneEdad(int edadMinima)
+        public bool tieneEdad(int edadMinima)
         {
             return edad >= edadMinima;
         }
@@ -81,14 +86,14 @@ namespace ej9
          * @param precioEntrada
          * @return
          */
-        public boolean tieneDinero(double precioEntrada)
+        public bool tieneDinero(double precioEntrada)
         {
             return dinero >= precioEntrada;
         }
 
-        @Override
-    public String toString()
+        public String toString()
         {
             return "el nombre del espectador es " + nombre + " de " + edad + " años y con " + dinero + " euros en su bolsillo";
         }
     }
+}
