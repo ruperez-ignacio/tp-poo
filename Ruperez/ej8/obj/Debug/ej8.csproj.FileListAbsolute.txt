@@ -5,3 +5,11 @@ C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej8\obj\Debug\ej8.csproj.CoreCompileInput
 C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej8\obj\Debug\ej8.exe
 C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej8\obj\Debug\ej8.pdb
 C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej8\obj\Debug\ej8.csprojAssemblyReference.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\bin\Debug\ej8.exe.config
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\bin\Debug\ej8.exe
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\bin\Debug\ej8.pdb
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\obj\Debug\ej8.csproj.AssemblyReference.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\obj\Debug\ej8.csproj.SuggestedBindingRedirects.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\obj\Debug\ej8.csproj.CoreCompileInputs.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\obj\Debug\ej8.exe
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej8\obj\Debug\ej8.pdb

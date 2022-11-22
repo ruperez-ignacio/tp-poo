@@ -1,2 +1,10 @@
 C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\obj\Debug\ej9.csprojAssemblyReference.cache
 C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.CoreCompileInputs.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\bin\Debug\ej9.exe.config
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\bin\Debug\ej9.exe
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\bin\Debug\ej9.pdb
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.AssemblyReference.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.SuggestedBindingRedirects.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.CoreCompileInputs.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.exe
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.pdb

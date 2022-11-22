@@ -18,6 +18,10 @@ namespace ej9
         public Cine(int filas, int columnas, double precio, Pelicula pelicula)
         {
             asientos = new Asiento[filas][];
+            for (int c = 0; c < filas; c++)
+            {
+                asientos[c] = new Asiento[columnas];
+            }
             this.precio = precio;
             this.pelicula = pelicula;
             rellenaButacas();
@@ -165,9 +169,13 @@ namespace ej9
          *
          * @return
          */
-        public int Filas()
+        public int Filas
         {
-            return asientos.Length;
+            get
+            {
+                return asientos.Length;
+
+            }
         }
 
         /**
@@ -175,9 +183,13 @@ namespace ej9
          *
          * @return
          */
-        public int Columnas()
+        public int Columnas
         {
-            return asientos[0].Length;
+            get
+            {
+                return asientos[0].Length;
+
+            }
         }
 
         /**

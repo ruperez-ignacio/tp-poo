@@ -8,9 +8,10 @@ namespace ej9
 {
     class Espectador
     {
-        private String nombre;
+        private string nombre;
         private int edad;
         private double dinero;
+        public static string[] nombres = {"Fernando", "Laura", "Pepe", "Eufrasio"};
 
         /*Constructores*/
         public Espectador(String nombre, int edad, double dinero)
@@ -21,7 +22,7 @@ namespace ej9
         }
 
         /*Metodos*/
-        public String Nombre
+        public string Nombre
         {
             set
             {

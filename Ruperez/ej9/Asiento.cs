@@ -67,7 +67,7 @@ namespace ej9
             return espectador != null;
         }
 
-        public String toString()
+        public string toString()
         {
             if (ocupado())
             {
