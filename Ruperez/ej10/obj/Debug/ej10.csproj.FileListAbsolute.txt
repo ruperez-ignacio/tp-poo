@@ -1,0 +1,8 @@
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\bin\Debug\ej10.exe.config
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\bin\Debug\ej10.exe
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\bin\Debug\ej10.pdb
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\obj\Debug\ej10.csproj.AssemblyReference.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\obj\Debug\ej10.csproj.SuggestedBindingRedirects.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\obj\Debug\ej10.csproj.CoreCompileInputs.cache
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\obj\Debug\ej10.exe
+C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej10\obj\Debug\ej10.pdb
