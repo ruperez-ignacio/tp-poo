@@ -11,88 +11,64 @@ namespace ej9
         private string nombre;
         private int edad;
         private double dinero;
-        public static string[] nombres = {"Fernando", "Laura", "Pepe", "Eufrasio"};
+        public static string[] nombres = {"Fernando", "Laura", "Pepe", "Eufrasio", "Leonardo", "Gabriel", "isaias"};
 
         /*Constructores*/
-        public Espectador(String nombre, int edad, double dinero)
+        public Espectador(string nombre, int edad, double dinero)
         {
             this.nombre = nombre;
             this.edad = edad;
             this.dinero = dinero;
         }
 
-        /*Metodos*/
-        public string Nombre
+        public string getNombre()
         {
-            set
-            {
-                nombre = value;
-            }
-            get
-            {
-                return nombre;
-            }
+            return nombre;
         }
 
-        public int Edad
+        public void setNombre(string nombre)
         {
-            set
-            {
-                edad = value;
-            }
-            get
-            {
-                return edad;
-            }
+            this.nombre = nombre;
         }
 
-        public double Dinero
+        public int getEdad()
         {
-            set
-            {
-                dinero = value;
-            }
-            get
-            {
-                return dinero;
-            }
+            return edad;
         }
-        /**
-         * Pagamos la entrada del cine
-         *
-         * @param precio
-         */
+
+        public void setEdad(int edad)
+        {
+            this.edad = edad;
+        }
+
+        public double getDinero()
+        {
+            return dinero;
+        }
+
+        public void setDinero(double dinero)
+        {
+            this.dinero = dinero;
+        }
+        
         public void pagar(double precio)
         {
             dinero -= precio;
         }
 
-        /**
-         * Indicamos si el espectador tiene edad para ver la pelicula (en el video
-         * estaba en la clase pelicula tiene mas sentido que sea un metodo del
-         * espectador)
-         *
-         * @param edadMinima
-         * @return
-         */
+        
         public bool tieneEdad(int edadMinima)
         {
             return edad >= edadMinima;
         }
 
-        /**
-         * Indicamos si el espectador tiene dinero (en el video estaba en la clase
-         * cine tiene mas sentido que sea un metodo del espectador)
-         *
-         * @param precioEntrada
-         * @return
-         */
+        
         public bool tieneDinero(double precioEntrada)
         {
             return dinero >= precioEntrada;
         }
 
-        public String toString()
+        public string toString()
         {
             return "el nombre del espectador es " + nombre + " de " + edad + " años y con " + dinero + " euros en su bolsillo";
         }

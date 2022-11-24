@@ -11,13 +11,13 @@ namespace ej9
     {
 
         /*Atributos*/
-        private String titulo;
+        private string titulo;
         private int duracion;
         private int edadMinima;
-        private String director;
+        private string director;
 
         /*Constructor*/
-        public Pelicula(String titulo, int duracion, int edadMinima, String director)
+        public Pelicula(string titulo, int duracion, int edadMinima, string director)
         {
             this.titulo = titulo;
             this.duracion = duracion;
@@ -26,55 +26,47 @@ namespace ej9
         }
 
         /*Metodos*/
-        public String Titulo
+        public string getTitulo()
         {
-            set
-            {
-                titulo = value;
-            }
-            get
-            {
-                return titulo;
-            }
+            return titulo;
         }
 
-        public int Duracion
+        public void setTitulo(string titulo)
         {
-            set
-            {
-                duracion = value;
-            }
-            get
-            {
-                return duracion;
-            }
+            this.titulo = titulo;
         }
 
-        public int EdadMinima
+        public int getDuracion()
         {
-            set
-            {
-                edadMinima = value;
-            }
-            get
-            {
-                return edadMinima;
-            }
+            return duracion;
         }
 
-        public String Director
+        public void setDuracion(int duracion)
         {
-            set
-            {
-                director = value;
-            }
-            get
-            {
-                return director;
-            }
+            this.duracion = duracion;
         }
 
-        public String toString()
+        public int getEdadMinima()
+        {
+            return edadMinima;
+        }
+
+        public void setEdadMinima(int edadMinima)
+        {
+            this.edadMinima = edadMinima;
+        }
+
+        public string getDirector()
+        {
+            return director;
+        }
+
+        public void setDirector(string director)
+        {
+            this.director = director;
+        }
+
+        public string toString()
         {
             return "'" + titulo + "' del director " + director + ", con una duracion de " + duracion + " minutos y la edad minima es de " + edadMinima + " años";
         }

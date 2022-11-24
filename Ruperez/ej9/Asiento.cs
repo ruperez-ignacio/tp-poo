@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace ej9
 {
-    /**
- * Clase asiento, se usa para manejar toda la informacion relativa al asiento
- *
- * @author DiscoDurodeRoer
- */
     class Asiento
     {
 
@@ -28,55 +23,43 @@ namespace ej9
         }
 
         /*Metodos*/
-        public char Letra
+        public char getLetra()
         {
-            set
-            {
-                letra = value;  
-            }
-            get
-            {
-                return letra;
-            }
-        }
-        public int Fila
-        {
-            set
-            {
-                fila = value;
-            }
-            get
-            {
-                return fila;
-            }
-        }
-        public Espectador Espectador
-        {
-            set
-            {
-                espectador = value;
-            }
-            get
-            {
-                return espectador;
-            }
+            return letra;
         }
 
+        public void setLetra(char letra)
+        {
+            this.letra = letra;
+        }
+
+        public int getFila()
+        {
+            return fila;
+        }
+
+        public void setFila(int fila)
+        {
+            this.fila = fila;
+        }
+
+        public Espectador getEspectador()
+        {
+            return espectador;
+        }
+
+        public void setEspectador(Espectador espectador)
+        {
+            this.espectador = espectador;
+        }
+
+       
         public bool ocupado()
         {
             return espectador != null;
         }
 
-        public string toString()
-        {
-            if (ocupado())
-            {
-                return "Asiento: " + fila + letra + " y " + espectador;
-            }
-
-            return "Asiento: " + fila + letra + " y este asiento está vacio ";
-
-        }
+        
 
 
     }

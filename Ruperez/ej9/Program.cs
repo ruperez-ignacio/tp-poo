@@ -36,37 +36,44 @@ namespace ej9
             Espectador e;
             int fila;
             char letra;
-            int c = 0;
 
             Console.WriteLine("Espectadores generados: ");
-            for (int i = 0; i < (cine.Columnas * cine.Filas); i++)
+            for (int i = 0; i < numEspectadores && cine.haySitio(); i++)
             {
-                e = new Espectador(Espectador.nombres[r.Next(0, Espectador.nombres.Length - 1)], r.Next(10, 30), r.Next(1, 15));
-                cine.mostrar();
 
+                //Generamos un espectador
+                e = new Espectador(
+                        Metodos.nombres[Metodos.generaNumeroEnteroAleatorio(0, Metodos.nombres.Length)], //Nombre al azar
+                        Metodos.generaNumeroEnteroAleatorio(10, 30), //Generamos una edad entre 10 y 30
+                        Metodos.generaNumeroEnteroAleatorio(1, 10)); //Generamos el dinero entre 1 y 10 euros
+
+                //Mostramos la informacion del espectador
+                Console.WriteLine("Nombre: " + e.getNombre() + " Edad: " + e.getEdad());
+
+                //Generamos una fila y letra
+                //Si esta libre continua sino busca de nuevo
                 do
                 {
-                    fila = r.Next(0, cine.Filas - 1);
-                    letra = (char)r.Next('A', 'A' + cine.Columnas - 1);
-                } while (!cine.haySitioButaca(fila, letra));
 
+                    fila = Metodos.generaNumeroEnteroAleatorio(0, cine.getFilas() - 1);
+                    letra = (char)Metodos.generaNumeroEnteroAleatorio('A', 'A' + (cine.getColumnas()));
+
+                } while (cine.haySitioButaca(fila, letra));
+
+                //Si el espectador cumple con las condiciones
                 if (cine.sePuedeSentar(e))
                 {
-                    e.pagar(precio);
-                    cine.sentar(fila, letra, e);
-
-                    c++;
-                    Console.WriteLine("\n" + e.Nombre);
-                    Console.WriteLine(e.Edad);
-                    Console.WriteLine(e.Dinero + cine.Precio);
-
+                    e.pagar(cine.getPrecio()); //El espectador paga el precio de la entrada
+                    cine.sentar(fila, letra, e); //El espectador se sienta
                 }
+
             }
 
             Console.WriteLine("");
             cine.mostrar(); //Mostramos la información del cine, tambien se puede usar un toString
-
+            Console.ReadKey();
             Console.WriteLine("Fin");
+
 
         }
 

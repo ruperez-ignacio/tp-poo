@@ -8,3 +8,8 @@ C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.SuggestedBindi
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.csproj.CoreCompileInputs.cache
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.exe
 C:\Users\rupig\Escritorio\tp-poo\Ruperez\ej9\obj\Debug\ej9.pdb
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\bin\Debug\ej9.exe.config
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\bin\Debug\ej9.exe
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\bin\Debug\ej9.pdb
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\obj\Debug\ej9.exe
+C:\Users\Alumno\Desktop\tp-poo\Ruperez\ej9\obj\Debug\ej9.pdb

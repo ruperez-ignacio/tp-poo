@@ -46,6 +46,7 @@
     <Compile Include="Asiento.cs" />
     <Compile Include="Cine.cs" />
     <Compile Include="Espectador.cs" />
+    <Compile Include="Metodos.cs" />
     <Compile Include="Pelicula.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
