@@ -39,29 +39,44 @@ namespace ej8
             disponibilidad();
         }
 
+        public string getNombre()
+        {
+            return nombre;
+        }
+
+        public void setNombre(string nombre)
+        {
+            this.nombre = nombre;
+        }
+ 
         public char getSexo()
         {
             return sexo;
         }
-        public string Nombre
+
+        public void setSexo(char sexo)
         {
-            get { return nombre; }
-            set { nombre = value; }
+            this.sexo = sexo;
         }
-        public int Edad
+
+        public int getEdad()
         {
-            get { return edad; }
-            set { edad = value; }
+            return edad;
         }
-        public char Sexo
+
+        public void setEdad(int edad)
         {
-            get { return sexo; }
-            set { sexo = value; }
+            this.edad = edad;
         }
-        public bool Asistencia
+
+        public bool isAsistencia()
         {
-            get { return asistencia; }
-            set { asistencia = value; }
+            return asistencia;
+        }
+
+        public void setAsistencia(bool asistencia)
+        {
+            this.asistencia = asistencia;
         }
 
         public virtual void disponibilidad()
@@ -72,34 +87,25 @@ namespace ej8
     }
 
     class Aula : Persona
-    {
-        int id_aula;
-        Docente docente;
-        Estudiante[] Estudiantes;
-        string[] materias = { "matemáticas", "filosofía", "física" };
-
-        //Estudiante estudiante1;
+    { 
         int maxEstudiantes = 30;
-        public static string materia;
-        public string Materia
-        {
-            get { return materia; }
-            set { materia = value; }
-        }
+        private int id_aula;
+        private Docente docente;
+        private Estudiante[] estudiantes;
+        private string materia;
 
-   
+        /*Constantes*/
+        int MAX_ALUMNOS = 20;
+        public static string[] MATERIAS={"Matematicas", "Filosofia", "Fisica"};
 
     //List<Estudiante> estudiante = new List<Estudiante>();
-
-
-
-    public Aula()
+        public Aula()
         {
             id_aula = 1;
-            Docente docente = new Docente();
-            Estudiante[] Estudiantes = new Estudiante[maxEstudiantes];
+            docente = new Docente();
+            estudiantes = new Estudiante[maxEstudiantes];
             creaAlumnos();
-            materia = materias[r.Next(0, materias.Length)];
+            materia = MATERIAS[r.Next(0, MATERIAS.Length)];
 
             //Docente docentes = new Docente("Profe Carlos");
             //Estudiante[] e = new Estudiante[maxEstudiantes];
@@ -107,10 +113,10 @@ namespace ej8
         }
         private void creaAlumnos()
         {
-
-            for (int i = 0; i < Estudiantes.Length; i++)
+            
+            for (int i = 0; i < estudiantes.Length; i++)
             {
-                Estudiantes[i] = new Estudiante();
+                estudiantes[i] = new Estudiante();
             }      
 
         }
@@ -121,10 +127,10 @@ namespace ej8
             int cuentaAsistencias = 0;
 
             //contamos las asistencias
-            for (int i = 0; i < Estudiantes.Length; i++)
+            for (int i = 0; i < estudiantes.Length; i++)
             {
 
-                if (Estudiantes[i].Asistencia)
+                if (estudiantes[i].isAsistencia())
                 {
                     cuentaAsistencias++;
                 }
@@ -134,7 +140,7 @@ namespace ej8
             //Muestro la asistencia total
             Console.WriteLine("Hay " + cuentaAsistencias + " alumnos");
 
-            return cuentaAsistencias >= (Estudiantes.Length / 2);
+            return cuentaAsistencias >= ((int)(estudiantes.Length / 2));
 
         }
         public bool darClase()
@@ -142,12 +148,12 @@ namespace ej8
 
             //Indicamos las condiciones para que se pueda dar la clase
 
-            if (!docente.Asistencia)
+            if (!docente.isAsistencia())
             {
                 Console.WriteLine("El profesor no esta, no se puede dar clase");
                 return false;
             }
-            else if (!docente.getMateria().Equals(materia))
+            else if (!docente.getMateria().Equals(materia)) 
             {
                 Console.WriteLine("La materia del profesor y del aula no es la misma, no se puede dar clase");
                 return false;
@@ -168,14 +174,14 @@ namespace ej8
             int chicosApro = 0;
             int chicasApro = 0;
 
-            for (int i = 0; i < Estudiantes.Length; i++)
+            for (int i = 0; i < estudiantes.Length; i++)
             {
 
                 //Comprobamos si el alumno esta aprobado
-                if (Estudiantes[i].Nota() >= 5)
+                if (estudiantes[i].Nota() >= 5)
                 {
                     //Segun el sexo, aumentara uno o otro
-                    if (Estudiantes[i].getSexo() == 'H')
+                    if (estudiantes[i].getSexo() == 'H')
                     {
                         chicosApro++;
                     }
@@ -199,11 +205,11 @@ namespace ej8
         int calificacion;
         int nota;
 
-        public Estudiante()
+        public Estudiante() : base()
         {
             nota = r.Next(0, 10);
 
-            Edad = r.Next(12, 15);
+            base.setEdad(r.Next(12, 15));
         }
         
         public int Nota()
@@ -215,11 +221,11 @@ namespace ej8
         {
             if (r.Next(0, 100) < 50)
             {
-                Asistencia = false;
+                base.setAsistencia(false);
             }
             else
             {
-                Asistencia = true;
+                base.setAsistencia(true);
             }
         }
 
@@ -233,31 +239,35 @@ namespace ej8
     class Docente : Persona
     {
         string materia;
+        public Docente() : base()
+        {
+        base.setEdad(r.Next(25, 50)); //llama al metodo padre
+
+        materia = Aula.MATERIAS[r.Next(0, 2)];
+        }
         public string getMateria()
         {
             return materia;
         }
-        public Docente()
+        public void setMateria(string materia)
         {
-
+            this.materia = materia;
         }
-        
+
 
         public override void disponibilidad()
         {
             if (r.Next(0, 100) < 20)
             {
-                Asistencia = false;
+                base.setAsistencia(false);
             }
             else
             {
-                Asistencia = true;
+                base.setAsistencia(true);
             }
         }
 
     }
-    
-
 
     internal class Program
     {
